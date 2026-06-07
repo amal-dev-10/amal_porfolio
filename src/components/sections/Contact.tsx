@@ -18,39 +18,39 @@ const contactInfo = [
   {
     icon: FiMail,
     label: 'Email',
-    value: 'amaldev@example.com',
-    href: 'mailto:amaldev@example.com',
+    value: 'devamal7902@gmail.com',
+    href: 'mailto:devamal7902@gmail.com',
     color: 'text-indigo-400',
     bg: 'bg-indigo-500/10',
   },
   {
     icon: FaWhatsapp,
     label: 'WhatsApp',
-    value: '+91 XXXXX XXXXX',
-    href: 'https://wa.me/',
+    value: '+91 79029 92447',
+    href: 'https://wa.me/7902992447',
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/10',
   },
   {
     icon: FiLinkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/amaldev',
-    href: 'https://linkedin.com/in/',
+    value: 'linkedin.com/in/amal-dev-b50a04292/',
+    href: 'https://linkedin.com/in/amal-dev-b50a04292/',
     color: 'text-blue-400',
     bg: 'bg-blue-500/10',
   },
   {
     icon: FiGithub,
     label: 'GitHub',
-    value: 'github.com/amaldev',
-    href: 'https://github.com/',
+    value: 'github.com/amald-dev-10',
+    href: 'https://github.com/amal-dev-10',
     color: 'text-gray-300',
     bg: 'bg-white/5',
   },
   {
     icon: FiMapPin,
     label: 'Location',
-    value: 'Kerala, India',
+    value: 'Trivandrum, Kerala, India',
     href: '#',
     color: 'text-rose-400',
     bg: 'bg-rose-500/10',
@@ -74,6 +74,7 @@ export const Contact = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -83,10 +84,43 @@ export const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setSubmitError(null);
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+
+    if (accessKey === "YOUR_ACCESS_KEY_HERE") {
+      setSubmitError("Please configure your VITE_WEB3FORMS_ACCESS_KEY in your environment/code.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        setSubmitError(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setSubmitError("Failed to send message. Please check your internet connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -242,6 +276,12 @@ export const Contact = () => {
                       className="form-input resize-none"
                     />
                   </div>
+
+                  {submitError && (
+                    <div className="text-rose-400 text-sm bg-rose-500/10 border border-rose-500/20 py-3 px-4 rounded-xl text-center">
+                      {submitError}
+                    </div>
+                  )}
 
                   <motion.button
                     type="submit"

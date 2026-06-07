@@ -12,10 +12,10 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com/in/', label: 'LinkedIn' },
-    { icon: FiMail, href: 'mailto:amaldev@example.com', label: 'Email' },
-    { icon: FaWhatsapp, href: 'https://wa.me/', label: 'WhatsApp' },
+    { icon: FiGithub, href: 'https://github.com/amald-dev-10/', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://linkedin.com/in/amal-dev-b50a04292/', label: 'LinkedIn' },
+    { icon: FiMail, href: 'mailto:devamal7902@gmail.com', label: 'Email' },
+    { icon: FaWhatsapp, href: 'https://wa.me/7902992447', label: 'WhatsApp' },
   ];
 
   const scrollTo = (href: string) => {
@@ -34,7 +34,7 @@ export const Footer = () => {
                 AD
               </div>
               <span className="text-white font-display font-bold text-xl">
-                Amal<span className="gradient-text">Dev</span>
+                Amal <span className="gradient-text">Dev</span>
               </span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
@@ -79,21 +79,21 @@ export const Footer = () => {
             <p className="text-white font-semibold text-sm mb-4 tracking-wide">Get In Touch</p>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:amaldev@example.com"
+                href="mailto:devamal7902@gmail.com"
                 className="flex items-center gap-2 text-gray-500 hover:text-indigo-400 text-sm transition-colors duration-200"
               >
                 <FiMail className="w-4 h-4" />
-                amaldev@example.com
+                devamal7902@gmail.com
               </a>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/7902992447"
                 className="flex items-center gap-2 text-gray-500 hover:text-green-400 text-sm transition-colors duration-200"
               >
                 <FaWhatsapp className="w-4 h-4" />
                 Available on WhatsApp
               </a>
               <a
-                href="https://linkedin.com/in/"
+                href="https://linkedin.com/in/amal-dev-b50a04292/"
                 className="flex items-center gap-2 text-gray-500 hover:text-blue-400 text-sm transition-colors duration-200"
               >
                 <FiLinkedin className="w-4 h-4" />

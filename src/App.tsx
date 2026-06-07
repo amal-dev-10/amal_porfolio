@@ -7,7 +7,7 @@ import { Projects } from './components/sections/Projects';
 import { Experience } from './components/sections/Experience';
 import { Services } from './components/sections/Services';
 import { Freelance } from './components/sections/Freelance';
-import { Testimonials } from './components/sections/Testimonials';
+// import { Testimonials } from './components/sections/Testimonials';
 import { Contact } from './components/sections/Contact';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Experience />
         <Services />
         <Freelance />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
       </main>
       <Footer />

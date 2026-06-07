@@ -4,9 +4,9 @@ dist
 .gitignore
 .dockerignore
 Dockerfile
-nginx.conf
 docker-compose.yml
 README.md
-eslint.config.js
-tsconfig*.json
-vite.config.ts
+.env
+.env*.local
+
+

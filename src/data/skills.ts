@@ -4,7 +4,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: 'Frontend',
     key: 'frontend',
-    skills: ['Vue.js', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
+    skills: ['Vue.js', 'React', 'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
   },
   {
     name: 'Mobile',
@@ -19,21 +19,20 @@ export const skillCategories: SkillCategory[] = [
   {
     name: 'Database',
     key: 'database',
-    skills: ['PostgreSQL', 'MySQL', 'Database Design', 'Query Optimization'],
+    skills: ['PostgreSQL', 'MySQL'],
   },
   {
     name: 'DevOps & Tools',
     key: 'devops',
-    skills: ['Docker', 'Git', 'Linux (Ubuntu)', 'VS Code', 'CI/CD', 'Server Management'],
+    skills: ['Docker', 'Git', 'Linux (Ubuntu)', 'VS Code', 'Firebase', 'Server Management'],
   },
 ];
 
 export const specializations = [
-  'Enterprise Applications',
+  'E-commerce Solutions',
   'GIS & Mapping Solutions',
   'Mobile App Development',
   'SaaS Platforms',
-  'AI-powered Chatbots',
   'CRM & Workflow Systems',
   'API Integrations',
 ];

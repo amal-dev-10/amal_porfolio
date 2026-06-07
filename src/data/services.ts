@@ -23,20 +23,6 @@ export const services: Service[] = [
     features: ['RESTful API Design', 'Third-party Integrations', 'API Documentation', 'Authentication & Security', 'WebSocket Support'],
   },
   {
-    id: 4,
-    title: 'GIS & Mapping Solutions',
-    description: 'Advanced geospatial applications with interactive maps, satellite imagery, and location-based services.',
-    icon: 'gis',
-    features: ['Interactive Maps', 'Geospatial APIs', 'Satellite Imagery', 'Parcel Mapping', 'Location Services'],
-  },
-  {
-    id: 5,
-    title: 'AI Integration & Chatbots',
-    description: 'Intelligent AI-powered systems, voice chatbots, and LLM integrations for modern business automation.',
-    icon: 'ai',
-    features: ['LLM Integration', 'Voice Chatbots', 'Workflow Automation', 'Real-time Chat', 'Custom AI Solutions'],
-  },
-  {
     id: 6,
     title: 'Technical Consulting',
     description: 'Architecture reviews, technology stack guidance, code reviews, and technical mentoring.',

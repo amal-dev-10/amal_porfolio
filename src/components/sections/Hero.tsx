@@ -7,15 +7,14 @@ const roles = [
   'Full Stack Developer',
   'Front-End Specialist',
   'Mobile App Developer',
-  'React & Vue Expert',
-  'API Architect',
+  'React & Vue Expert'
 ];
 
 const stats = [
-  { value: '6+', label: 'Years Experience' },
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '30+', label: 'Happy Clients' },
-  { value: '5+', label: 'Tech Domains' },
+  { value: '4+', label: 'Years Experience' },
+  { value: '5+', label: 'Projects Delivered' },
+  { value: '2+', label: 'Happy Clients' },
+  { value: '7+', label: 'Tech Domains' },
 ];
 
 
@@ -140,9 +139,9 @@ export const Hero = () => {
             >
               <span className="text-gray-600 text-sm">Follow me:</span>
               {[
-                { icon: FiGithub, href: 'https://github.com/', label: 'GitHub' },
-                { icon: FiLinkedin, href: 'https://linkedin.com/in/', label: 'LinkedIn' },
-                { icon: FaWhatsapp, href: 'https://wa.me/', label: 'WhatsApp', color: 'hover:text-green-400' },
+                { icon: FiGithub, href: 'https://github.com/amal-dev-10', label: 'GitHub' },
+                { icon: FiLinkedin, href: 'https://www.linkedin.com/in/amal-dev-112653219/', label: 'LinkedIn' },
+                { icon: FaWhatsapp, href: 'https://wa.me/7902992447', label: 'WhatsApp', color: 'hover:text-green-400' },
               ].map(({ icon: Icon, href, label, color = 'hover:text-indigo-400' }) => (
                 <a
                   key={label}
@@ -196,7 +195,7 @@ export const Hero = () => {
                 <div className="text-7xl">👨‍💻</div>
                 <div className="text-center">
                   <p className="text-white font-bold font-display text-sm">Amal Dev</p>
-                  <p className="text-gray-500 text-xs font-mono mt-1">Full Stack Dev</p>
+                  <p className="text-gray-500 text-xs font-mono mt-1">Senior Frontend Engineer</p>
                 </div>
                 {/* Status indicator */}
                 <div className="absolute -top-2 -right-2 flex items-center gap-1.5 bg-emerald-500/20 border border-emerald-500/30 rounded-full px-2.5 py-1">
@@ -210,7 +209,8 @@ export const Hero = () => {
                 { label: 'React', emoji: '⚛️', pos: 'top-0 left-0' },
                 { label: 'Vue.js', emoji: '💚', pos: 'top-0 right-0' },
                 { label: 'Node.js', emoji: '🟢', pos: 'bottom-0 left-0' },
-                { label: 'Docker', emoji: '🐳', pos: 'bottom-0 right-0' },
+                { label: 'Angular', emoji: '', pos: 'bottom-40 right-0' },
+                { label: 'React native', emoji: '⚛️', pos: 'bottom-0 right-0' },
               ].map(({ label, emoji, pos }, i) => (
                 <motion.div
                   key={label}

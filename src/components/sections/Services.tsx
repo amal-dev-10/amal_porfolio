@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 import { SectionHeader } from '../ui/SectionHeader';
 import { services } from '../../data/services';
-import { FiGlobe, FiSmartphone, FiCode, FiMap, FiCpu, FiMessageSquare } from 'react-icons/fi';
+import { FiGlobe, FiSmartphone, FiCode, FiCpu, FiMessageSquare } from 'react-icons/fi';
 import { FiCheck } from 'react-icons/fi';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   web: FiGlobe,
   mobile: FiSmartphone,
   api: FiCode,
-  gis: FiMap,
   ai: FiCpu,
   consulting: FiMessageSquare,
 };
